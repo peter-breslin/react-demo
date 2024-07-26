@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {UserList, LocationList, Home, NoPage} from './page';
+import {Navbar} from './layout';
+
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+
+const client = new ApolloClient({
+  uri: 'https://flyby-router-demo.herokuapp.com/',
+  cache: new InMemoryCache(),
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <ApolloProvider client={client}>
+     <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Navbar />}>
+              <Route index element={<Home />} />
+              <Route path="user-list" element={<UserList />} />
+              <Route path="location-list" element={<LocationList />} />
+              <Route path="*" element={ <NoPage />} />
+            </Route>
+        </Routes>
+        </BrowserRouter>
+        </ApolloProvider>
+    </>
+
   );
 }
 

@@ -1,3 +1,15 @@
+
+
+# Installed React Axios (https://www.npmjs.com/package/react-axios)
+### `npm install axios`
+### `npm install prop-types`
+
+# Add React Router
+### `npm i -D react-router-dom`
+
+# Installed Apollo Client (https://www.apollographql.com/docs/react/get-started)
+### `npm install @apollo/client graphql`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

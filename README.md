@@ -1,15 +1,3 @@
-
-
-# Installed React Axios (https://www.npmjs.com/package/react-axios)
-### `npm install axios`
-### `npm install prop-types`
-
-# Add React Router
-### `npm i -D react-router-dom`
-
-# Installed Apollo Client (https://www.apollographql.com/docs/react/get-started)
-### `npm install @apollo/client graphql`
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -80,3 +68,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### IDE
+This project uses Visual Studio Code which can be downloaded at `https://code.visualstudio.com/download`
+
+# Installed React Axios (https://www.npmjs.com/package/react-axios)
+### `npm install axios`
+### `npm install prop-types`
+
+# Add React Router
+### `npm i -D react-router-dom`
+
+# Installed Apollo Client (https://www.apollographql.com/docs/react/get-started)
+### `npm install @apollo/client graphql`

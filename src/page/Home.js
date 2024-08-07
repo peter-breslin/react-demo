@@ -1,5 +1,14 @@
+
+import { SimpleForm, ComplexForm } from "../component/SimpleForm";
+
+
+
 const App = () => {
-    return <h1>Home</h1>;
+    return(
+      <>
+      <ComplexForm />
+      </>
+    )
   };
   
   export default App;

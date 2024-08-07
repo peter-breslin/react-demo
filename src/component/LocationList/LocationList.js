@@ -30,15 +30,12 @@ function DisplayLocations({query}) {
   ));
 }
 
-
-
 const App = () => {
   return(
     <>
       <DisplayLocations query={GET_LOCATIONS} />
     </>
   )
-
   }
 
   export default App;

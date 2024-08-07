@@ -73,6 +73,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### IDE
 This project uses Visual Studio Code which can be downloaded at `https://code.visualstudio.com/download`
 
+### Tutorial
+The tutorial I used to get started to learn REACT can be found at `https://www.w3schools.com/REACT/` 
+
+
 # Installed React Axios (https://www.npmjs.com/package/react-axios)
 ### `npm install axios`
 ### `npm install prop-types`

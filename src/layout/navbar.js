@@ -1,12 +1,12 @@
 import  { Outlet, Link} from 'react-router-dom';
-
+import './navbar.css';
 
 const App = () => {
 
     return(
         <>
-          <nav>
-        <ul>
+      <nav>
+        <ul className='nav'>
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -14,11 +14,10 @@ const App = () => {
             <Link to="/user-list">User List</Link>
           </li>
           <li>
-            <Link to="/location-list">Apollo Client</Link>
+            <Link to="/location-list">Location List</Link>
           </li>
         </ul>
       </nav>
-
       <Outlet />
         </>
     )

@@ -1,0 +1,27 @@
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow:auto;
+    background-color: black;
+  }
+  
+  ul.nav li {
+    float: left;
+    font-size: small;
+    text-transform: uppercase;
+
+  }
+
+  ul.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1rem 1rem;
+    text-decoration: none;
+  }
+
+  ul.nav li a:hover{
+    color: white;
+    text-decoration: underline;
+  }

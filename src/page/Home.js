@@ -1,12 +1,11 @@
 
-import { SimpleForm, ComplexForm } from "../component/SimpleForm";
-
+import { ComplexForm,ContextComponentParent } from "../component";
 
 
 const App = () => {
     return(
       <>
-      <ComplexForm />
+      <ContextComponentParent userName="Peter Breslin" />
       </>
     )
   };

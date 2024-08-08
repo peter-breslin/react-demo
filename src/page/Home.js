@@ -1,11 +1,11 @@
 
-import { ComplexForm,ContextComponentParent } from "../component";
+import { ReducerSampleComponent } from "../component";
 
 
 const App = () => {
     return(
       <>
-      <ContextComponentParent userName="Peter Breslin" />
+      <ReducerSampleComponent />
       </>
     )
   };

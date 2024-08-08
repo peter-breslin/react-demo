@@ -4,7 +4,9 @@ import axios from 'axios';
 
 
 const App = (url) => {
+    const [loading, setLoading] = useState(true);
     const [data, setData] = useState([]);
+    const [error, setError] = useState("");
 
     let axiosConfig = {
         headers: {
@@ -17,15 +19,15 @@ const App = (url) => {
         axios.get(url, axiosConfig)
         .then(response => response.data)
         .then(response => setData(response))
-        .catch((err) => { console.log("Error", err);
-        })
+        .then(() => setLoading(false))
+        .catch((err) => { setError(err)})
     };
 
     useEffect(() => {
         httpGet();
     },[url]);
 
-    return data;
+    return [data, loading, error];
 }
 
 export default App;

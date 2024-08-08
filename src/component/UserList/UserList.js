@@ -3,15 +3,15 @@ import UserCard from '../UserCard';
 
 const App = ({url}) => {
 
-    const data = useHttpGet(url);
+    const [data, loading, error] = useHttpGet(url);
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error : {error.message}</p>;
 
     return(
      <>
-    <ul>
-        {data.map(o => ( <UserCard key={o.id} user={o}/>))}
-    </ul> 
+          {data.map(o => ( <UserCard key={o.id} user={o}/>))}
      </>
-
     )
 }
 

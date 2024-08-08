@@ -10,7 +10,8 @@ const App = ({url}) => {
 
     return(
      <>
-          {data.map(o => ( <UserCard key={o.id} user={o}/>))}
+         <h4>Http Get Example using Axios</h4>
+         {data.map(o => ( <UserCard key={o.id} user={o}/>))}
      </>
     )
 }

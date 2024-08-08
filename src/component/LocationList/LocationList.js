@@ -33,6 +33,9 @@ function DisplayLocations({query}) {
 const App = () => {
   return(
     <>
+    <h4>GraphQL Example</h4>
+    <p>Apollo Client is connected to React with the ApolloProvider component <i>(See App.js)</i> similar to React's Context.Provider and enables us to execute any query against the Apollo Client Uri via the <i>'useQuery'</i> hook</p>
+    <p></p>
       <DisplayLocations query={GET_LOCATIONS} />
     </>
   )

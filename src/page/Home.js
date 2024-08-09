@@ -1,11 +1,11 @@
 
-import { ReducerSampleComponent } from "../component";
+import { AgeReducerComponent } from "../component";
 
 
 const App = () => {
     return(
       <>
-      <ReducerSampleComponent />
+      <AgeReducerComponent />
       </>
     )
   };

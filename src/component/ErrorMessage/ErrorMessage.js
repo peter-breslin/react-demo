@@ -1,6 +1,6 @@
 
-const App = ({err}) => {
-    return  <p>Error : {err.message}</p>;
+const App = ({error}) => {
+    return  <p>Error : {error.message}</p>;
 }
 
 export default App;

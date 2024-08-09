@@ -1,3 +1,4 @@
+import ErrorMessage from './ErrorMessage';
 import UserList from './UserList/UserList';
 import { SimpleForm, ComplexForm } from './SimpleForm'
 import { ContextComponentParent } from './ContextComponent';
@@ -7,12 +8,13 @@ import TodoContainer from './TodoList';
 import SpinnerComponent from './Spinner';
 
 export {
-    UserReducerComponent,
+    ErrorMessage,
     ComplexForm,
     ContextComponentParent,
     ReducerSampleComponent,
     SimpleForm,
     SpinnerComponent,
     TodoContainer,
-    UserList  
+    UserList,
+    UserReducerComponent,
 }

@@ -1,9 +1,22 @@
 import { act, useReducer } from "react";
 
+
+const ActionType = Object.freeze( {
+    Increment: 'incremented_age',
+    Decrement: 'decrement_age'
+})
+
+
 const ageReducer = (state, action) => {
-    if(action.type === 'incremented_age'){
+    if(action.type === ActionType.Increment){
         return {
             age : state.age + 1
+        }
+    }
+
+    if(action.type === ActionType.Decrement){
+        return {
+            age : state.age - 1
         }
     }
 
@@ -16,8 +29,11 @@ const App = () => {
 
 return(
     <>
-        <button onClick={() => {dispatch({ type: 'incremented_age'})}}>
-            Increment Age
+        <button onClick={() => {dispatch({ type: ActionType.Increment})}}>
+            Increment
+        </button>
+        <button onClick={() => {dispatch({ type: ActionType.Decrement})}}>
+            Decrement
         </button>
         <p>Hello! You are {state.age}</p>
     </>

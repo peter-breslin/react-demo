@@ -1,5 +1,8 @@
-import { useState, useCallback} from 'react';
+import { useState, useCallback, useMemo} from 'react';
 import Todos from './Todos';
+
+
+
 
 
 // This is an example of "referential equality". Every time a component re-renders, its functions get recreated. 
@@ -10,6 +13,7 @@ const App = () => {
 
     const[count, setCount] = useState(0)
     const [todos, setTodos] = useState([])
+    const calculation = useMemo(() => expensiveCalculation(count), [count]);
 
     const increment = () => {
         setCount((c) => c + 1);
@@ -25,10 +29,19 @@ const App = () => {
           <div>
             Count: {count}
             <button onClick={increment}>+</button>
+            <h2>Expensive Calculation</h2>
+            { calculation}
           </div>
         </>
       );
+}
 
+const expensiveCalculation = (num) => {
+  console.log("Calculating...");
+  for(let i = 0; i < 1000000000; i++){
+    num +=1;
+  }
+  return num;
 }
 
 export default App;

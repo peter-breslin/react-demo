@@ -1,5 +1,6 @@
 
 import { useQuery, gql} from '@apollo/client';
+import { SpinnerComponent } from '../index';
 
 const GET_LOCATIONS = gql`
   query GetLocations {
@@ -15,7 +16,7 @@ const GET_LOCATIONS = gql`
 function DisplayLocations({query}) {
   const { loading, error, data } = useQuery(query);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <SpinnerComponent/>
   if (error) return <p>Error : {error.message}</p>;
 
   return data.locations.map(({ id, name, description, photo }) => (

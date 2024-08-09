@@ -3,6 +3,7 @@ import { SimpleForm, ComplexForm } from './SimpleForm'
 import { ContextComponentParent } from './ContextComponent';
 import { ReducerSampleComponent } from './ReducerComponent';
 import { UserReducerComponent } from './ReducerComponent';
+import TodoContainer from './TodoList';
 
 export {
     UserReducerComponent,
@@ -10,5 +11,6 @@ export {
     ContextComponentParent,
     ReducerSampleComponent,
     SimpleForm,
+    TodoContainer,
     UserList  
 }

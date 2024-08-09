@@ -1,11 +1,11 @@
 
-import { UserReducerComponent } from "../component";
+import { ReducerSampleComponent, UserReducerComponent, TodoContainer } from "../component";
 
 
 const App = () => {
     return(
       <>
-      <UserReducerComponent />
+      <TodoContainer />
       </>
     )
   };

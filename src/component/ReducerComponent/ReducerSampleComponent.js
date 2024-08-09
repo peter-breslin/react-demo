@@ -36,7 +36,6 @@ const initialTodos = [
         dispatch({type: 'COMPLETE', id: todo.id})
     };
 
-
     return (
         <>
           {todos.map((todo) => (

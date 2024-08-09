@@ -1,3 +1,19 @@
+## Project Rational
+
+In the now era of microservices architecture, software development/scrum teams in my experience have a specific set of stand-alone applications to 'look after',
+most probably divided by business unit function thus leaving a consumer to juggle multiple applications in order carry out their daily tasks.
+
+In my idealist software development team I would focus to only build stand-alone lightweight web components that all use a single endpoint for a data source.
+
+This architecture has the following benefits; 
+1) Each consumer can build his/her own dashboard of components for their own specific daily tasks
+2) GraphQL allows back-end developers to consolidate multiple APIs into one endpoint and solely focus on backend development.
+3) Front-end developers can easily fetch data from this single API via a GraphQL IDE leaving them to create components fast!
+4) All the business logic and processing would take place on Azure/AWS servers leaving the component lightweight and interchangeable with modern front-end languages (REACT,Angular, Vue).
+
+This project aims to test this theory against the API end-point `https://docs.spacexdata.com/` and to learn REACT/Azure/AWS along the way.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

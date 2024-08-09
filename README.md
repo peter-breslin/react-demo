@@ -100,10 +100,12 @@ The tutorial I used to get started to learn REACT can be found at `https://www.w
 ### Add React Router
 ### `npm i -D react-router-dom`
 
-### Installed Apollo Client (https://www.apollographql.com/docs/react/get-started)
+### Installed Apollo Client 
+Reference: https://www.apollographql.com/docs/react/get-started
 ### `npm install @apollo/client graphql`
 
 
-### Add Font Awesome `https://docs.fontawesome.com/v5/web/use-with/react/`
-### Using icons via Individual use 
-### This projects font awesome icons can be found at `https://fontawesome.com/v5/search?o=r&m=free&s=regular`
+### Add Font Awesome 
+See `https://docs.fontawesome.com/v5/web/use-with/react/`
+
+This projects font awesome icons can be found at `https://fontawesome.com/v5/search?o=r&m=free&s=regular`

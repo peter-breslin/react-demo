@@ -2,10 +2,10 @@ import UserList from './UserList/UserList';
 import { SimpleForm, ComplexForm } from './SimpleForm'
 import { ContextComponentParent } from './ContextComponent';
 import { ReducerSampleComponent } from './ReducerComponent';
-import { AgeReducerComponent } from './ReducerComponent';
+import { UserReducerComponent } from './ReducerComponent';
 
 export {
-    AgeReducerComponent,
+    UserReducerComponent,
     ComplexForm,
     ContextComponentParent,
     ReducerSampleComponent,

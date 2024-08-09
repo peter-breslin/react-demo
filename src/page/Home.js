@@ -1,11 +1,11 @@
 
-import { AgeReducerComponent } from "../component";
+import { UserReducerComponent } from "../component";
 
 
 const App = () => {
     return(
       <>
-      <AgeReducerComponent />
+      <UserReducerComponent />
       </>
     )
   };

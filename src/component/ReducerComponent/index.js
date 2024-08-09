@@ -1,8 +1,8 @@
 import ReducerSampleComponent from './ReducerSampleComponent';
-import AgeReducerComponent from './AgeReducerComponent';
+import UserReducerComponent from './UserReducerComponent';
 
 
 export {
-    AgeReducerComponent,
+    UserReducerComponent,
     ReducerSampleComponent
 }

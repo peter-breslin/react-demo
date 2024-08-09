@@ -81,7 +81,7 @@ The tutorial I used to get started to learn REACT can be found at `https://www.w
 ### `npm install axios`
 ### `npm install prop-types`
 
-# Add React Router
+### Add React Router
 ### `npm i -D react-router-dom`
 
 ### Installed Apollo Client (https://www.apollographql.com/docs/react/get-started)

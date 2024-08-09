@@ -1,7 +1,12 @@
 import { useReducer } from "react";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
+
 import User from './User';
 import { UserReducer, UserReducerActionType } from './UserReducer';
+
+
 
 
 const App = () => {
@@ -19,10 +24,10 @@ return(
     <>
         <input value={state.name} onChange={handleInputChange} />
         <button onClick={() => {dispatch({ type: UserReducerActionType.Increment})}}>
-            Increment
+        <FontAwesomeIcon icon={faPlus} size="lg"/>
         </button>
         <button onClick={() => {dispatch({ type: UserReducerActionType.Decrement})}}>
-            Decrement
+        <FontAwesomeIcon icon={faMinus} size="lg"/>
         </button>
         <p>Hello {state.name }. You are {state.age}</p>
     </>

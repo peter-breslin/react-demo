@@ -5,7 +5,7 @@ import { ReducerSampleComponent, UserReducerComponent, TodoContainer } from "../
 const App = () => {
     return(
       <>
-      <TodoContainer />
+      <UserReducerComponent />
       </>
     )
   };

@@ -11,7 +11,7 @@ This architecture has the following benefits;
 3) Front-end developers can easily fetch data from this single API via a GraphQL IDE leaving them to create components fast!
 4) All the business logic and processing would take place on Azure/AWS servers leaving the component lightweight and interchangeable with modern front-end languages (REACT,Angular, Vue).
 
-This project aims to test this theory against the API end-point `https://docs.spacexdata.com/` and to learn REACT/Azure/AWS along the way.
+This project aims to test this theory against the API end-point `https://docs.spacexdata.com/` and to gain a deeper understanding of REACT/Azure along the way.
 
 
 # Getting Started with Create React App

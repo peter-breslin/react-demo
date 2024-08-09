@@ -77,12 +77,12 @@ This project uses Visual Studio Code which can be downloaded at `https://code.vi
 The tutorial I used to get started to learn REACT can be found at `https://www.w3schools.com/REACT/` 
 
 
-# Installed React Axios (https://www.npmjs.com/package/react-axios)
+### Installed React Axios (https://www.npmjs.com/package/react-axios)
 ### `npm install axios`
 ### `npm install prop-types`
 
 # Add React Router
 ### `npm i -D react-router-dom`
 
-# Installed Apollo Client (https://www.apollographql.com/docs/react/get-started)
+### Installed Apollo Client (https://www.apollographql.com/docs/react/get-started)
 ### `npm install @apollo/client graphql`

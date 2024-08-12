@@ -1,5 +1,7 @@
 
 const App = ({company}) => {
+    if(!company)
+        return null;
 
 return(
     <>

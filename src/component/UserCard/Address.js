@@ -1,4 +1,6 @@
 const App = ({address}) => {
+    if(!address)
+        return null;
 
     return(
         <>

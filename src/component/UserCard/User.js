@@ -1,5 +1,7 @@
 
 const App = ({user}) => {
+    if(!user)
+        return null; // Component hides itself when null is returned.
 
     return(
         <>

@@ -1,4 +1,6 @@
 const App = ({geo}) => {
+    if(!geo)
+        return null;
 
     return(
         <>

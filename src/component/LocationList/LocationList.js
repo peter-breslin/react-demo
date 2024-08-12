@@ -1,6 +1,7 @@
 
 import { useQuery, gql} from '@apollo/client';
 import { ErrorMessage, SpinnerComponent } from '../index';
+import LocationView from './LocationView';
 
 const GET_LOCATIONS = gql`
   query GetLocations {
@@ -19,17 +20,8 @@ function DisplayLocations({query}) {
   if (loading) return <SpinnerComponent/>
   if (error) return <p><ErrorMessage error={error} /></p>;
 
-  return data.locations.map(({ id, name, description, photo }) => (
-    <div key={id}>
-      <h3>{name}</h3>
-      <img width="400" height="250" alt="location-reference" src={`${photo}`} />
-      <br />
-      <b>About this location:</b>
-      <p>{description}</p>
-      <br />
-    </div>
-  ));
-}
+  return data.locations.map(({ id, name, description, photo }) => 
+  <LocationView id={id} name={name} description={description} photo={photo} />);}
 
 const App = () => {
   return(

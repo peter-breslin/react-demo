@@ -1,3 +1,6 @@
+import './UserCard.css';
+
+
 import User from './User'
 import Company from './Company';
 import Address from './Address';
@@ -8,10 +11,17 @@ const App = ({user}) => {
 
     return(
         <>
-            <User user={user} />
-            <Company company={user.company} />
-            <Address address={user.address} />
-            <Geo geo={user.address.geo}/>
+             <div class="grid-container-user">
+                <div><User user={user} /></div>
+                <div><Company company={user.company} /></div>
+                <div><Address address={user.address} /></div>
+                <div><Geo geo={user.address.geo}/></div>
+             </div>
+
+            
+           
+         
+          
         </>
     )
 };

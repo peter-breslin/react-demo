@@ -1,0 +1,22 @@
+
+
+.grid-container-user{
+    background-color: black;
+    display:inline-grid;
+    grid-template-rows:auto;
+    gap:0.3rem;
+    margin:0 auto;
+    padding:0.3rem;
+}
+
+.grid-container-user > div {
+    background-color: gainsboro;
+    padding: 0.3rem 0.3rem;
+    text-align:left;
+}
+
+
+.grid-container-user div span {
+    font-size: smaller;
+    font-weight: bold;
+}

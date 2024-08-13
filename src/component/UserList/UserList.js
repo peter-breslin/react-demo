@@ -1,9 +1,8 @@
 
-import { useEffect } from 'react';
+import { useState } from 'react';
 
 import { ErrorMessage, SpinnerComponent } from '../index';
 import { useHttpGet } from '../../hook';
-import { useState } from 'react';
 import UserCard from '../UserCard';
 
 

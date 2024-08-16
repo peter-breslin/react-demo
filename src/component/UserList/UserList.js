@@ -21,10 +21,10 @@ const App = ({url}) => {
     return(
      <>
         <select onChange={handleChange}>
-            <option value="-1">-- Please Select --</option>
+            <option value="-1">Select User</option>
             {data.map( o => <option value={o.id}>{o.name}</option>)}
         </select>
-        { user && <UserCard user={user} /> }
+        { user && <UserCard key={user.id} user={user} /> }
      </>
     )
 }

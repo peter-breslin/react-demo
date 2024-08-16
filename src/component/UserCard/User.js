@@ -1,5 +1,3 @@
-import './User.css';
-
 
 const App = ({user}) => {
     if(!user)
@@ -7,10 +5,10 @@ const App = ({user}) => {
 
     return(
         <>
-          <div class="grid-container-user">
-            <div class="grid-item-1"><span>NAME:</span>{user.name}</div>
-            <div class="grid-item-2"><span>EMAIL:</span> {user.email}</div>
-            <div class="grid-item-3"><span>PHONE:</span> {user.phone}</div>
+          <div class="grid-container">
+            <div><span>Name</span>{user.name}</div>
+            <div><span>Email</span>{user.email}</div>
+            <div><span>Phone</span>{user.phone}</div>
           </div>
         </>
     )

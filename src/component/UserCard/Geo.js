@@ -4,9 +4,9 @@ const App = ({geo}) => {
 
     return(
         <>
-        <h4>GEO</h4>
-            <h4>{geo.lat}</h4>
-            <h4>{geo.lng}</h4>
+            <div class="grid-container">
+            <div><span>Latitude/Longitude</span>{geo.lat}/{geo.lng}</div>
+          </div>
         </>
     )
     };

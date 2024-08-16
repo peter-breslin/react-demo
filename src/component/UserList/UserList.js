@@ -21,8 +21,10 @@ const App = ({url}) => {
     
     return(
      <>
-        <SelectTag data={data} handleChange={handleChange}/>
-        { user && <UserCard key={user.id} user={user} /> }
+        <div class="grid-container">
+            <div><SelectTag data={data} handleChange={handleChange}/></div>
+            <div>{ user && <UserCard key={user.id} user={user} /> }</div>
+          </div>
      </>
     )
 }

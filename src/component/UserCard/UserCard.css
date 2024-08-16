@@ -3,7 +3,7 @@
 .grid-container-user-card {
   align-content:start;
   background-color: #f8f9f9 ;
-  display: grid;
+  display: inline-grid;
 }
 
 .grid-item {

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ErrorMessage, SpinnerComponent } from '../index';
 import { useHttpGet } from '../../hook';
 import UserCard from '../UserCard';
+import { SelectTag } from '../CommonHtmlElement';
 
 
 
@@ -20,10 +21,7 @@ const App = ({url}) => {
     
     return(
      <>
-        <select onChange={handleChange}>
-            <option value="-1">Select User</option>
-            {data.map( o => <option value={o.id}>{o.name}</option>)}
-        </select>
+        <SelectTag data={data} handleChange={handleChange}/>
         { user && <UserCard key={user.id} user={user} /> }
      </>
     )

@@ -1,11 +1,14 @@
 
-import { ReducerSampleComponent, UserReducerComponent, TodoContainer } from "../component";
+import {  PostMessageToQueue } from "../component";
 
 
 const App = () => {
+
+  var message = "Hello Wodf";
+
     return(
       <>
-      <UserReducerComponent />
+      <PostMessageToQueue url={process.env.REACT_APP_MESSAGE_QUEUE_URL} message={message} />
       </>
     )
   };

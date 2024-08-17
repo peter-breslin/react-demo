@@ -6,11 +6,13 @@ import { ReducerSampleComponent } from './ReducerComponent';
 import { UserReducerComponent } from './ReducerComponent';
 import TodoContainer from './TodoList';
 import SpinnerComponent from './Spinner';
+import PostMessageToQueue from './PostMessageToQueue';
 
 export {
-    ErrorMessage,
     ComplexForm,
     ContextComponentParent,
+    ErrorMessage,
+    PostMessageToQueue,
     ReducerSampleComponent,
     SimpleForm,
     SpinnerComponent,

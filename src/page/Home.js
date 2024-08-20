@@ -1,14 +1,12 @@
 
-import {  PostMessageToQueue } from "../component";
+import {  MessageQueueForm } from "../component";
 
 
 const App = () => {
 
-  var message = "Hello Wodf";
-
     return(
       <>
-      <PostMessageToQueue url={process.env.REACT_APP_MESSAGE_QUEUE_URL} message={message} />
+      <MessageQueueForm url={process.env.REACT_APP_MESSAGE_QUEUE_URL} />
       </>
     )
   };

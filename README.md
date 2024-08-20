@@ -104,8 +104,28 @@ The tutorial I used to get started to learn REACT can be found at `https://www.w
 Reference: https://www.apollographql.com/docs/react/get-started
 ### `npm install @apollo/client graphql`
 
-
 ### Add Font Awesome 
 See `https://docs.fontawesome.com/v5/web/use-with/react/`
 
 This projects font awesome icons can be found at `https://fontawesome.com/v5/search?o=r&m=free&s=regular`
+
+### How to generate URL for hook 'useHttpPostMessageToQueue'
+
+### PowerShell
+### `Get-AzLocation | Select-Object Location`
+### `$location = "eastus"`
+### Create a resource group
+### `$resourceGroup = "howtoqueuesrg"`
+### `New-AzResourceGroup -ResourceGroupName $resourceGroup -Location $location`
+### Create a storage account
+### `$storageAccountName = "howtoqueuestorage"`
+### `$storageAccount = New-AzStorageAccount -ResourceGroupName $resourceGroup -Name $storageAccountName -Location $location -SkuName Standard_LRS`
+### `$ctx = $storageAccount.Context`
+### Create a queue
+### `$queueName = "howtoqueue"`
+### `$queue = New-AzStorageQueue -Name $queueName -Context $ctx`
+
+### Add Access Policy against the queue
+### Generate SAS using stored access policy
+### Copy SAS URL to environment setting 'REACT_APP_MESSAGE_QUEUE_URL'
+### 

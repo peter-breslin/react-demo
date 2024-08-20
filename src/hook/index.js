@@ -1,7 +1,7 @@
 import useHttpGet from './useHttpGet';
-import useHttpPostMessageToQueue from './useHttpPostMessageToQueue';
+import useSendToQueue from './useSendToQueue';
 
 export {
     useHttpGet,
-    useHttpPostMessageToQueue
+    useSendToQueue
 }

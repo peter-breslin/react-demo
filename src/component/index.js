@@ -1,18 +1,20 @@
 import ErrorMessage from './ErrorMessage';
 import UserList from './UserList/UserList';
-import { SimpleForm, ComplexForm } from './SimpleForm'
+import { SimpleForm, ComplexForm } from './Form'
+import { MessageQueueForm } from './Form';
 import { ContextComponentParent } from './ContextComponent';
 import { ReducerSampleComponent } from './ReducerComponent';
 import { UserReducerComponent } from './ReducerComponent';
 import TodoContainer from './TodoList';
 import SpinnerComponent from './Spinner';
-import PostMessageToQueue from './PostMessageToQueue';
+
+
 
 export {
     ComplexForm,
     ContextComponentParent,
     ErrorMessage,
-    PostMessageToQueue,
+    MessageQueueForm,
     ReducerSampleComponent,
     SimpleForm,
     SpinnerComponent,

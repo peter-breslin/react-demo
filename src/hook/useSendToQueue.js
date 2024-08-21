@@ -20,11 +20,8 @@ const App = (url) => {
                 };
     
               fetch(url, options)
-              .then(() => setInProgress(false))
-              .catch(error => { 
-                    setError(error);
-                    setInProgress(false)
-                });
+              .catch(err => { setError(err);})
+              .finally(() => setInProgress(false));
 
         } catch(err){
             setError(err);

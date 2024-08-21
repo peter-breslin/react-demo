@@ -19,8 +19,8 @@ const App = (url) => {
         axios.get(url, axiosConfig)
         .then(response => response.data)
         .then(response => setData(response))
-        .then(() => setLoading(false))
         .catch((err) => { setError(err)})
+        .finally(() => setLoading(false))
     };
 
     useEffect(() => {

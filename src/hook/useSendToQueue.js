@@ -8,6 +8,11 @@ const App = (url) => {
 
     const sendToQueue = async (data) => {
 
+        // Always use with useEffect. Kinda like dispose in C#
+        // const controller = new AbortController();
+        // fetch(url, { signal: controller.signal})
+        // return() => controller.abort()
+
         setInProgress(true);
 
         try
@@ -22,7 +27,6 @@ const App = (url) => {
               fetch(url, options)
               .catch(err => { setError(err);})
               .finally(() => setInProgress(false));
-
         } catch(err){
             setError(err);
             setInProgress(false);

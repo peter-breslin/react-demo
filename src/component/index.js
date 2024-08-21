@@ -6,7 +6,8 @@ import { ContextComponentParent } from './ContextComponent';
 import { ReducerSampleComponent } from './ReducerComponent';
 import { UserReducerComponent } from './ReducerComponent';
 import TodoContainer from './TodoList';
-import SpinnerComponent from './Spinner';
+import SpinnerComponent from './Spinner/';
+import SubmitButton from './SubmitButton/SubmitButton';
 
 
 
@@ -18,6 +19,7 @@ export {
     ReducerSampleComponent,
     SimpleForm,
     SpinnerComponent,
+    SubmitButton,
     TodoContainer,
     UserList,
     UserReducerComponent,

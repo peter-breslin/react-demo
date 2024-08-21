@@ -1,5 +1,5 @@
 import useSubmitForm from './MessageQueueFormSubmit';
-import {SpinnerComponent, ErrorMessage} from '..';
+import {SpinnerComponent, ErrorMessage, SubmitButton} from '..';
 import MessageQueueFormSubmit from './MessageQueueFormSubmit';
 
 import { useState} from 'react';
@@ -18,27 +18,28 @@ const App = ({url}) => {
         setInputs(values => ({...values, [name]: value}));
     }
 
-    const onSubmitMessage = (event) =>{
+    const onSubmitMessage = async (event) =>{
         event.preventDefault();
-        submit(inputs);
+        await submit(inputs);
 
-        if(!error)
+
+        if(!error && !inProgress)
             setInputs([]);
     }
 
-    let inputButton;
+    // let inputButton;
 
-    if(inProgress)
-        inputButton = <SpinnerComponent/>;
-    else
-        inputButton =  <input type="submit" value="Post Message" />
+    // if(inProgress)
+    //     inputButton = <SpinnerComponent/>;
+    // else
+    //     inputButton =  <input type="submit" value="Post Message" />
 
    // if (inProgress) return <SpinnerComponent/>
    // if (error) return <ErrorMessage error={error} />
 
 return(
 <>  
-        <form onSubmit={onSubmitMessage}>
+        <form>
                 <label>Enter your name:
                     <input type="text" name="name" value={inputs.name || ""} onChange={onChangeMessage}/>
                 </label>
@@ -46,7 +47,7 @@ return(
                     <input type="text" name="reference" value={inputs.reference || ""} onChange={onChangeMessage} />
                 </label>
                 
-                { inputButton }
+               <SubmitButton onClickHandler={onSubmitMessage} inProgress={inProgress}/>
         </form>
 </>)
 

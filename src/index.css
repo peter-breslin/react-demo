@@ -12,6 +12,27 @@
   margin: 0;
 }
 
+.btn {
+  background: gainsboro;
+  border: none;
+  outline: none;
+  color: black;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:disabled {
+  background: #e7e8e9;
+  color: #9fa3a9;
+  cursor: not-allowed;
+}
+
+.btn-medium {
+min-width: 8rem;
+min-height: 1.5rem;
+}
+
+
 select, option{
     font-family: Arial;
 }

@@ -16,7 +16,7 @@ const App = () => {
     const calculation = useMemo(() => expensiveCalculation(count), [count]);
 
     const increment = () => {
-        setCount((c) => c + 1);
+        setCount((c) => c + 1); // Don't do setCount(count + 1) on multiple set states in row, React batches all together and executes once! 
     }
 
     // const addTodo = () => {setTodos((t) => [...t, "New Todo"]);};

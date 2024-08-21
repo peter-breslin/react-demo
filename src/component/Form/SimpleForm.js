@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useRef } from 'react';
 
 const App = () => {
 
-    const [name, setName] = useState("");
+    const name = useRef();
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert(`The name you entered was: ${name}`)
+        alert(`The name you entered was: ${name.current.value}`)
     }
 return(
     <>
@@ -14,8 +14,7 @@ return(
         <label>Enter your name:
         <input 
             type="text" 
-            value={name}
-            onChange={(e) => setName(e.target.value)} />
+            ref={name} />
         </label>
         <input type="submit" />
     </form>

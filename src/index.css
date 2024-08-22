@@ -32,6 +32,11 @@ min-width: 8rem;
 min-height: 1.5rem;
 }
 
+input:disabled{
+  background: #e7e8e9;
+  color: #9fa3a9;
+  cursor: not-allowed;
+}
 
 select, option{
     font-family: Arial;

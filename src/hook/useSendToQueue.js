@@ -1,41 +1,36 @@
 
-import { findAllByAltText } from '@testing-library/react';
 import { useState } from 'react';
+import axios from 'axios';
 
-const App = (url) => {
+const App = (baseUrl, url) => {
 
     const [error, setError] = useState("");
     const [inProgress, setInProgress] = useState(false);
 
-    const sendToQueue = async (data) => {
+    const sendToQueue = (jsonObject) => {
 
-        // Always use with useEffect. Kinda like dispose in C#
-        // const controller = new AbortController();
-        // fetch(url, { signal: controller.signal})
-        // return() => controller.abort()
-        setInProgress(true);
-        setTimeout(() => httpPostQueueMessage(data), 5000);
+            setInProgress(true);
+            setTimeout( async () => {
+
+            try
+            {
+                var data = `<QueueMessage><MessageText>${JSON.stringify(jsonObject)}</MessageText></QueueMessage>`;
+
+                url = "https://httpstat.us/404";
+                await axios.post(url, data, {
+                    "Content-Type": "text/xml",
+                    "Access-Control-Allow-Origin" : baseUrl
+                });
+            }
+            catch(err){
+                setError(err.message);
+            }
+            finally{
+               setInProgress(false);
+            }
+
+            }, 3000);
     };
-
-    const httpPostQueueMessage = async (data) => {
-        try
-        {
-            let options = {
-                         mode: "no-cors",
-                         method: 'POST',
-                         headers: { 'Content-Type': 'text/xml' },
-                         body: `<QueueMessage><MessageText>${JSON.stringify(data)}</MessageText></QueueMessage>`
-                };
-    
-              fetch(url, options).catch(err => { setError(err);})
-        } catch(err){
-            setError(err);
-        }
-        finally{
-            setInProgress(false);
-        }
-    };
-
 
     return [sendToQueue, inProgress, error];
 }

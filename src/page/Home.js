@@ -6,7 +6,7 @@ const App = () => {
 
     return(
       <>
-      <MessageQueueForm url={process.env.REACT_APP_MESSAGE_QUEUE_URL} />
+      <MessageQueueForm baseUrl={process.env.REACT_APP_MESSAGE_QUEUE_BASE_URL} url={process.env.REACT_APP_MESSAGE_QUEUE_URL}/>
       </>
     )
   };

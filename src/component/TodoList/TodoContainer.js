@@ -13,13 +13,14 @@ const App = () => {
 
     const[count, setCount] = useState(0)
     const [todos, setTodos] = useState([])
+    //const calculation = expensiveCalculation(count);
     const calculation = useMemo(() => expensiveCalculation(count), [count]);
 
     const increment = () => {
         setCount((c) => c + 1); // Don't do setCount(count + 1) on multiple set states in row, React batches all together and executes once! 
     }
 
-    // const addTodo = () => {setTodos((t) => [...t, "New Todo"]);};
+    //const addTodo = () => {setTodos((t) => [...t, "New Todo"]);};
     const addTodo = useCallback(() => { setTodos((t) => [...t, "New Todo"]);}, [todos]);
 
       return (
